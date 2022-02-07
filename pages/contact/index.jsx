@@ -1,14 +1,20 @@
 import Layout from '../../components/layout/Layout';
 import styles from './Contact.module.css';
-import Script from 'next/script';
+import Link from 'next/link';
 
 
 function Conatact() {
     return (
         <Layout
-            title="SuperHeores | Conatact"
-            description="this is the Conatact of the website">
-            <h1 className={styles.container}>Conatact</h1>
+            title="WebSite | Contact"
+            description="this is the Contact of the website">
+            <div className={styles.container}>Contact</div>
+            {/* <=============== SCROLL UP ===============--> */}
+            <Link href="/contact">
+                <a className="scrollup" id="scroll-up">
+                    <i className="ri-arrow-up-fill scrollup__icon"></i>
+                </a>
+            </Link>
         </Layout>
 
     );

@@ -1,5 +1,5 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap");
 
 /*=============== VARIABLES CSS ===============*/
 :root {
@@ -25,7 +25,7 @@
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
-  --body-font: "Poppins", sans-serif;
+  --body-font: "Nunito", Verdana, Geneva, Tahoma, sans-serif;
   --big-font-size: 2rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
@@ -169,6 +169,16 @@ the website, in dark theme
 .section {
   padding: 4rem 0 1rem;
 }
+.sectionOne {
+  padding: 3rem 0 1rem;
+}
+.sectionTwo {
+  padding: 2rem 0 1rem;
+}
+
+.sectionThree {
+  padding: 1rem 0 1rem;
+}
 
 .section__title,
 .section__title-center {
@@ -246,6 +256,71 @@ the website, in dark theme
   display: inline-flex;
   font-size: 1.25rem;
   cursor: pointer;
+}
+
+/* ============================================================= */
+/* Custon Button Login, Logout, Register & Profile */
+
+.btn__login {
+  color: #fff;
+  font-weight: var(--font-medium);
+  font-size: var(--small-font-size);
+  background-color: var(--first-color);
+  box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.4);
+  padding: 0 15px;
+  border-radius: 4px;
+  height: 30px;
+}
+.btn__login:hover {
+  background-color: var(--first-color-alt);
+  opacity: 0.8;
+}
+.btn__login:active {
+  opacity: 0.3;
+}
+.btn__register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+  font-size: var(--small-font-size);
+}
+.btn__register:hover {
+  text-decoration: underline;
+}
+.btn__register:active {
+  opacity: 0.5;
+}
+.container__profile {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+.user__name {
+  font-weight: var(--font-medium);
+  font-size: var(--small-font-size);
+  align-self: center;
+  justify-self: center;
+}
+.user__menu {
+  min-width: 8rem;
+  transform: translate3d(0px, 40px, 0px);
+  font-size: var(--small-font-size);
+  align-self: center;
+  justify-self: center;
+}
+.avatar {
+  display: inline-block;
+  margin-bottom: 0;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 @media screen and (max-width: 767px) {
@@ -330,7 +405,7 @@ the website, in dark theme
   background-color: var(--first-color);
   color: #fff;
   padding: 1rem 1.75rem;
-  border-radius: 0.5rem;
+  border-radius: 0.3rem;
   font-weight: var(--font-medium);
   transition: 0.3s;
 }
@@ -540,9 +615,11 @@ the website, in dark theme
   }
   .nav__toggle,
   .nav__close,
-  .nav__menu__icon {
+  .nav__menu__icon,
+  .container__profile__mobile {
     display: none;
   }
+
   .nav__list {
     flex-direction: row;
     column-gap: 3rem;

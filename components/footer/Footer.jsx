@@ -50,6 +50,9 @@ const Footer = () => {
 
                     <ul className="footer__data">
                         <li className="footer__information">
+                            <i className="ri-mail-send-line footer__contact-link"></i> felixmanuelfigueroa@gmail.com
+                        </li>
+                        <li className="footer__information">
                             <i className="ri-phone-line footer__contact-link"></i> +54 911 33851987
                         </li>
 
@@ -88,17 +91,17 @@ const Footer = () => {
                     <div className="footer__payments">
                         <Link href="/">
                             <a className="footer__payments-link">
-                                <Image src="/assets/img/bitcoin.png" alt="" className="footer__payments" width={35} height={35} />
+                                <Image src="/assets/img/pay_1.png" alt="" className="footer__payments" width={35} height={35} />
                             </a>
                         </Link>
                         <Link href="/">
                             <a className="footer__payments-link">
-                                <Image src="/assets/img/etherum.png" alt="" className="footer__payments" width={35} height={35} />
+                                <Image src="/assets/img/pay_2.png" alt="" className="footer__payments" width={35} height={35} />
                             </a>
                         </Link>
                         <Link href="/">
                             <a className="footer__payments-link">
-                                <Image src="/assets/img/usdt.png" alt="" className="footer__payments" width={35} height={35} />
+                                <Image src="/assets/img/pay_3.png" alt="" className="footer__payments" width={35} height={35} />
                             </a>
                         </Link>
                     </div>

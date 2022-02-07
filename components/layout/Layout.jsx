@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Link from "next/link";
 import Navbar from "../navbar/Navbar";
 import Footer from "../footer/Footer";
 import { ToastContainer } from "react-toastify";
@@ -20,13 +19,6 @@ const Layout = ({ children, title, description }) => {
                 {children}
             </main>
             <Footer />
-
-            {/* <=============== SCROLL UP ===============--> */}
-            <Link href="/">
-                <a className="scrollup" id="scroll-up">
-                    <i className="ri-arrow-up-fill scrollup__icon"></i>
-                </a>
-            </Link>
 
             {/* <=============== MAIN JS ===============--> */}
             <Script type="text/javascript" src="/assets/js/main.js" />

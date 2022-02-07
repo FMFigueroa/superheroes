@@ -1,0 +1,324 @@
+.body__form {
+  margin: auto;
+  width: 90%;
+  max-width: 400px;
+}
+
+.form__title {
+  font-weight: bold;
+  color: #0070f3;
+  text-align: center;
+  font-size: 2.2rem;
+  font-family: "Nunito";
+}
+.link {
+  padding: 0.5rem;
+  margin: 0 1rem 0.2rem 0;
+  text-decoration: none;
+  color: rgb(243, 179, 41);
+  font-weight: 500;
+}
+
+.form__container {
+  margin: auto;
+  width: 95%;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 0px 8px 1px rgba(1, 1, 32, 0.3);
+}
+.form {
+  padding: 2rem 1.5rem 3rem 1.5rem;
+  display: grid;
+  gap: 1.4rem;
+}
+.form__group {
+  position: relative;
+  --color: #5757577e;
+}
+.form__input {
+  width: 100%;
+  background: none;
+  --color2: #706c6c;
+  font-size: 1rem;
+  padding: 0.6rem 2rem;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--color);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.form__input__password {
+  width: 100%;
+  background: none;
+  color: var(--color2);
+  font-size: 1rem;
+  padding: 0.6rem 2rem;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--color);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 0.1ch;
+}
+/* ================================== */
+.form__input__invalid__email {
+  width: 100%;
+  background: none;
+  color: var(--color2);
+  font-size: 1rem;
+  padding: 0.6rem 2rem;
+  border: none;
+  outline: none;
+  border-bottom: 3px solid #da2e30;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.form__input__invalid__password {
+  width: 100%;
+  background: none;
+  color: var(--color);
+  font-size: 1rem;
+  padding: 0.6rem 2rem;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #da2e30;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 0.1ch;
+}
+/* === Animation label and placeholder with focus Input valid === */
+
+.form__input:not(:placeholder-shown) {
+  --color3: #4d4646;
+}
+.form__input:focus + .form__label,
+.form__input:not(:placeholder-shown) + .form__label {
+  transform: translateX(-18px) translateY(-6px) scale(0.7);
+  transform-origin: left top;
+}
+
+.form__input__password:not(:placeholder-shown) {
+  color: var(--color3);
+}
+.form__input__password:focus + .form__label,
+.form__input__password:not(:placeholder-shown) + .form__label {
+  transform: translateX(-18px) translateY(-6px) scale(0.7);
+  transform-origin: left top;
+}
+
+/* === Animation label and placeholder with focus Input Invalid === */
+
+.form__input__invalid__email:not(:placeholder-shown) {
+  color: var(--color3);
+}
+.form__input__invalid__email:focus + .form__label,
+.form__input__invalid__email:not(:placeholder-shown) + .form__label {
+  transform: translateX(-18px) translateY(-6px) scale(0.7);
+  transform-origin: left top;
+}
+
+.form__input__invalid__password:not(:placeholder-shown) {
+  color: var(--color3);
+}
+.form__input__invalid__password:focus + .form__label,
+.form__input__invalid__password:not(:placeholder-shown) + .form__label {
+  transform: translateX(-18px) translateY(-6px) scale(0.7);
+  transform-origin: left top;
+}
+
+/* ================================== */
+.form__label {
+  color: #7a7a8d;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 50px;
+  transform: translateY(10px);
+  transition: transform 0.5s, color 0.3s;
+}
+.form__icon_l {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--color2);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transform: translateY(1px);
+}
+.form__icon_r {
+  position: absolute;
+  top: 0;
+  right: 0rem;
+  background: none;
+  border: none;
+  color: var(--color3);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transform: translateY(1px);
+}
+.form__icon_r:active {
+  opacity: 0.5;
+}
+
+/* ================================== */
+.form__line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #0070f3;
+  box-shadow: 0px 0px 8px 1.5px rgba(1, 1, 32, 0.3);
+  transform: scale(0);
+  transform: left bottom;
+  transition: transform 0.4s;
+}
+/* ==========Line animation =================== */
+.form__input:focus ~ .form__line,
+.form__input:not(:placeholder-shown) ~ .form__line {
+  transform: scale(1);
+}
+
+.form__input__password:focus ~ .form__line,
+.form__input__password:not(:placeholder-shown) ~ .form__line {
+  transform: scale(1);
+}
+/* ================================== */
+.form__error {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.7rem;
+  color: #da2e30;
+  transform: translateX(10px) translateY(18px);
+}
+
+/*=========== Avatar of Register Form  =============*/
+
+.grid__container__avatar {
+  display: grid;
+
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: auto 1fr;
+}
+.avatar__container {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.label__container {
+  justify-self: center;
+  align-self: center;
+  grid-area: 2/ 1/ 3/ 3;
+}
+.input__container {
+  justify-self: center;
+  align-self: center;
+  grid-area: 1/ 2/ 2/ 3;
+}
+.avatar {
+  margin: 0.5rem;
+
+  height: 3rem;
+  width: 3rem;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.rounded__circle {
+  border-radius: 50% !important;
+}
+
+.avatar__label {
+  padding-left: 1rem;
+  font-size: 0.7rem;
+  color: #7a7a8d;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.avatar__input {
+  width: 100%;
+  background-color: #cfcfd4;
+  color: #fff;
+  border-radius: 3px;
+  padding: 0.5rem;
+  font-family: "Nunito";
+  font-size: 0.8rem;
+  border: none;
+  cursor: pointer;
+}
+
+/*===================== Header User Profile ===========================*/
+
+.avatar-nav {
+  margin-right: 0.6rem;
+  height: 2.2rem;
+  width: 2.2rem;
+}
+
+/*============== Button submit ===============*/
+.form__submit {
+  width: 95%;
+  background-color: #0070f3;
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.5rem;
+  font-family: "Nunito";
+  font-size: 1.2rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.form__submit__google {
+  margin-top: 20px;
+  width: 100%;
+  color: #ffff;
+  background-color: rgb(90, 157, 235);
+  border-radius: 8px;
+  padding: 0.5rem 3rem;
+  font-family: "Nunito";
+  border: none;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.form__submit:hover {
+  opacity: 0.9;
+}
+.form__submit:active {
+  box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.5);
+  opacity: 0.6;
+}
+.alert__container {
+  margin-bottom: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.alert__container__form {
+  width: 95%;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  background: #f8c2c4;
+  border-color: #da2e30;
+  border-style: solid;
+}
+.form__alert__text {
+  margin: 0;
+  color: #da2e30;
+  text-align: center;
+  font-size: 0.9rem;
+}
+.link__alert {
+  text-align: center;
+  text-decoration: none;
+  color: #ffff;
+  font-size: 1rem;
+}
+
+@media (max-width: 425px) {
+  .form__title {
+    font-size: 2rem;
+  }
+}
