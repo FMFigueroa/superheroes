@@ -3,6 +3,7 @@ import { combineReducers } from 'redux';
 
 import { authReducer, userReducer, loadedUserReducer, forgotPasswordReducer, resetPasswordReducer, allUsersReducer, userDetailsReducer } from './userReducers'
 
+import { searchHeroReducer, searchDetailsHeroReducer } from "./heroReducers";
 
 const reducer = combineReducers({
     auth: authReducer,
@@ -11,7 +12,9 @@ const reducer = combineReducers({
     allUsers: allUsersReducer,
     userDetails: userDetailsReducer,
     forgotPassword: forgotPasswordReducer,
-    resetPassword: resetPasswordReducer
+    resetPassword: resetPasswordReducer,
+    searchHero: searchHeroReducer,
+    detailsHero: searchDetailsHeroReducer,
 
 })
 

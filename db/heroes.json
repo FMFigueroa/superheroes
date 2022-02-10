@@ -1,0 +1,266 @@
+[
+  {
+    "id": "644",
+    "name": "Superman",
+    "powerstats": {
+      "intelligence": "94",
+      "strength": "100",
+      "speed": "100",
+      "durability": "100",
+      "power": "100",
+      "combat": "85"
+    },
+    "biography": {
+      "full-name": "Clark Kent",
+      "alter-egos": "Superman Prime One-Million",
+      "aliases": [
+        "Clark Joseph Kent",
+        "The Man of Steel",
+        "the Man of Tomorrow",
+        "the Last Son of Krypton",
+        "Big Blue",
+        "the Metropolis Marvel",
+        "the Action Ace"
+      ],
+      "place-of-birth": "Krypton",
+      "first-appearance": "ACTION COMICS #1",
+      "publisher": "Superman Prime One-Million",
+      "alignment": "good"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "Kryptonian",
+      "height": ["6'3", "191 cm"],
+      "weight": ["225 lb", "101 kg"],
+      "eye-color": "Blue",
+      "hair-color": "Black"
+    },
+    "work": {
+      "occupation": "Reporter for the Daily Planet and novelist",
+      "base": "Metropolis"
+    },
+    "connections": {
+      "group-affiliation": "Justice League of America, The Legion of Super-Heroes (pre-Crisis as Superboy); Justice Society of America (pre-Crisis Earth-2 version); All-Star Squadron (pre-Crisis Earth-2 version)",
+      "relatives": "Lois Lane (wife), Jor-El (father, deceased), Lara (mother, deceased), Jonathan Kent (adoptive father), Martha Kent (adoptive mother), Seyg-El (paternal grandfather, deceased), Zor-El (uncle, deceased), Alura (aunt, deceased), Supergirl (Kara Zor-El, cousin), Superboy (Kon-El/Conner Kent, partial clone)"
+    },
+    "image": {
+      "url": "https://www.superherodb.com/pictures2/portraits/10/100/791.jpg"
+    }
+  },
+  {
+    "id": "332",
+    "name": "Hulk",
+    "powerstats": {
+      "intelligence": "88",
+      "strength": "100",
+      "speed": "63",
+      "durability": "100",
+      "power": "98",
+      "combat": "85"
+    },
+    "biography": {
+      "full-name": "Bruce Banner",
+      "alter-egos": "No alter egos found.",
+      "aliases": [
+        "Annihilator",
+        "Captain Universe",
+        "Joe Fixit",
+        "Mr. Fixit",
+        "Mechano",
+        "Professor",
+        "Jade Jaws",
+        "Golly Green Giant"
+      ],
+      "place-of-birth": "Dayton, Ohio",
+      "first-appearance": "Incredible Hulk #1 (May, 1962)",
+      "publisher": "Marvel Comics",
+      "alignment": "good"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "Human / Radiation",
+      "height": ["8'0", "244 cm"],
+      "weight": ["1400 lb", "630 kg"],
+      "eye-color": "Green",
+      "hair-color": "Green"
+    },
+    "work": {
+      "occupation": "Nuclear physicist, Agent of S.H.I.E.L.D.",
+      "base": "(Banner) Hulkbuster Base, New Mexico, (Hulk) mobile, but prefers New Mexico"
+    },
+    "connections": {
+      "group-affiliation": "Defenders, former leader of the new Hulkbusters, member of the Avengers, Pantheon, Titans Three, the Order, Hulkbusters of Counter-Earth-Franklin, alternate Fantastic Four",
+      "relatives": "Betty Ross Talbot Banner (wife), Brian Banner (father, apparently deceased), Rebecca Banner (mother, deceased), Morris Walters (uncle), Elaine Banner Walters (aunt, deceased), Jennifer Walters (She-Hulk, cousin), Thaddeus E. 'Thunderbolt' Ross (father"
+    },
+    "image": {
+      "url": "https://www.superherodb.com/pictures2/portraits/10/100/83.jpg"
+    }
+  },
+  {
+    "id": "70",
+    "name": "Batman",
+    "powerstats": {
+      "intelligence": "100",
+      "strength": "26",
+      "speed": "27",
+      "durability": "50",
+      "power": "47",
+      "combat": "100"
+    },
+    "biography": {
+      "full-name": "Bruce Wayne",
+      "alter-egos": "No alter egos found.",
+      "aliases": ["Insider", "Matches Malone"],
+      "place-of-birth": "Crest Hill, Bristol Township; Gotham County",
+      "first-appearance": "Detective Comics #27",
+      "publisher": "DC Comics",
+      "alignment": "good"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "Human",
+      "height": ["6'2", "188 cm"],
+      "weight": ["210 lb", "95 kg"],
+      "eye-color": "blue",
+      "hair-color": "black"
+    },
+    "work": {
+      "occupation": "Businessman",
+      "base": "Batcave, Stately Wayne Manor, Gotham City; Hall of Justice, Justice League Watchtower"
+    },
+    "connections": {
+      "group-affiliation": "Batman Family, Batman Incorporated, Justice League, Outsiders, Wayne Enterprises, Club of Heroes, formerly White Lantern Corps, Sinestro Corps",
+      "relatives": "Damian Wayne (son), Dick Grayson (adopted son), Tim Drake (adopted son), Jason Todd (adopted son), Cassandra Cain (adopted ward)\nMartha Wayne (mother, deceased), Thomas Wayne (father, deceased), Alfred Pennyworth (former guardian), Roderick Kane (grandfather, deceased), Elizabeth Kane (grandmother, deceased), Nathan Kane (uncle, deceased), Simon Hurt (ancestor), Wayne Family"
+    },
+    "image": {
+      "url": "https://www.superherodb.com/pictures2/portraits/10/100/639.jpg"
+    }
+  },
+  {
+    "id": "370",
+    "name": "Joker",
+    "powerstats": {
+      "intelligence": "100",
+      "strength": "10",
+      "speed": "12",
+      "durability": "60",
+      "power": "43",
+      "combat": "70"
+    },
+    "biography": {
+      "full-name": "Jack Napier",
+      "alter-egos": "No alter egos found.",
+      "aliases": [
+        "Red Hood I",
+        "Clown Prince of Crime",
+        "Harlequin of Hate",
+        "Jack Napier",
+        "Joe Kerr",
+        "Mr. J"
+      ],
+      "place-of-birth": "-",
+      "first-appearance": "Batman #1 (Spring 1940)",
+      "publisher": "DC Comics",
+      "alignment": "bad"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "Human",
+      "height": ["6'5", "196 cm"],
+      "weight": ["192 lb", "86 kg"],
+      "eye-color": "Green",
+      "hair-color": "Green"
+    },
+    "work": {
+      "occupation": "-",
+      "base": "Arkham Asylum, Gotham City; Ha-Hacienda"
+    },
+    "connections": {
+      "group-affiliation": "Black Glove, Injustice Gang, Injustice League, Joker League of Anarchy",
+      "relatives": "Jeannie (wife, deceased); Unborn son (deceased); Melvin Reipan (cousin, deceased)"
+    },
+    "image": {
+      "url": "https://www.superherodb.com/pictures2/portraits/10/100/719.jpg"
+    }
+  },
+  {
+    "id": "514",
+    "name": "Penguin",
+    "powerstats": {
+      "intelligence": "75",
+      "strength": "10",
+      "speed": "12",
+      "durability": "28",
+      "power": "30",
+      "combat": "45"
+    },
+    "biography": {
+      "full-name": "Oswald Chesterfield Cobblepot",
+      "alter-egos": "No alter egos found.",
+      "aliases": ["-"],
+      "place-of-birth": "-",
+      "first-appearance": "DETECTIVE COMICS #58 (December, 1941)",
+      "publisher": "DC Comics",
+      "alignment": "bad"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "Human",
+      "height": ["5'2", "157 cm"],
+      "weight": ["175 lb", "79 kg"],
+      "eye-color": "Blue",
+      "hair-color": "Black"
+    },
+    "work": {
+      "occupation": "Trader",
+      "base": "Gotham City"
+    },
+    "connections": {
+      "group-affiliation": "-",
+      "relatives": "Miranda Cobblepot (Aunt), Miranda (Mother, deceased), Father (deceased)"
+    },
+    "image": {
+      "url": "https://www.superherodb.com/pictures2/portraits/10/100/753.jpg"
+    }
+  },
+  {
+    "id": "655",
+    "name": "Thanos",
+    "powerstats": {
+      "intelligence": "100",
+      "strength": "100",
+      "speed": "33",
+      "durability": "100",
+      "power": "100",
+      "combat": "80"
+    },
+    "biography": {
+      "full-name": "Thanos",
+      "alter-egos": "No alter egos found.",
+      "aliases": ["The Mad Titan", "Masterlord", "The Overmaster", "Chins"],
+      "place-of-birth": "Titan",
+      "first-appearance": "Iron Man #55",
+      "publisher": "Marvel Comics",
+      "alignment": "bad"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "Eternal",
+      "height": ["6'7", "201 cm"],
+      "weight": ["985 lb", "443 kg"],
+      "eye-color": "Red",
+      "hair-color": "No Hair"
+    },
+    "work": {
+      "occupation": "Conqueror, worshiper of Death",
+      "base": "Mobile, formerly Sanctuary II, Titan"
+    },
+    "connections": {
+      "group-affiliation": "Zodiac (ally); formerly Infinity Watch, Defenders",
+      "relatives": "A'Lars (father): Sui-San (mother, deceased; Eros (brother);Kronos (paternal Grandfather, deceased); Daina (paternal grandmother, deceased); Zuras (uncle, deceased); Thena (cousin); Gamora (foster daughter);Nebula (alleged granddaughter); Rot (\"child\" by Death);"
+    },
+    "image": {
+      "url": "https://www.superherodb.com/pictures2/portraits/10/100/1305.jpg"
+    }
+  }
+]

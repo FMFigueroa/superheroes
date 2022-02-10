@@ -1,0 +1,44 @@
+[
+  {
+    "id": "644",
+    "name": "Superman",
+    "powerstats": {
+      "intelligence": "100",
+      "strength": "100",
+      "speed": "33",
+      "durability": "100",
+      "power": "100",
+      "combat": "80"
+    },
+    "biography": {
+      "full-name": "Thanos",
+      "alter-egos": "No alter egos found.",
+      "aliases": ["The Mad Titan", "Masterlord", "The Overmaster", "Chins"],
+      "place-of-birth": "Titan",
+      "first-appearance": "Iron Man #55",
+      "publisher": "Marvel Comics",
+      "alignment": "bad"
+    }
+  },
+  {
+    "id": "655",
+    "name": "Thanos",
+    "powerstats": {
+      "intelligence": "100",
+      "strength": "100",
+      "speed": "33",
+      "durability": "100",
+      "power": "100",
+      "combat": "80"
+    },
+    "biography": {
+      "full-name": "Thanos",
+      "alter-egos": "No alter egos found.",
+      "aliases": ["The Mad Titan", "Masterlord", "The Overmaster", "Chins"],
+      "place-of-birth": "Titan",
+      "first-appearance": "Iron Man #55",
+      "publisher": "Marvel Comics",
+      "alignment": "bad"
+    }
+  }
+]

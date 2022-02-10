@@ -1,8 +1,89 @@
-.container {
-  width: 100%;
-  height: 800px;
+.home {
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --hue: 220;
+  --hue2: 30;
+  --first-color: hsl(var(--hue), 100%, 50%);
+  --first-color-alt: hsl(var(--hue2), 80%, 50%);
+}
+
+.title a {
+  color: var(--first-color);
+  text-decoration: none;
+}
+
+.title a:hover,
+.title a:focus,
+.title a:active {
+  text-decoration: underline;
+  color: var(--first-color-alt);
+}
+
+.title {
+  padding: 1rem 0 0 0;
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+.title,
+.description,
+.search {
+  text-align: center;
+}
+
+.description {
+  font-size: 1rem;
+}
+
+.logo__container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+  text-align: left;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  width: 260px;
+}
+
+.card:hover,
+.card:focus {
+  color: var(--first-color);
+  border-color: var(--first-color);
+}
+.card:active {
+  transform: scale(1.01);
+  opacity: 0.8;
+}
+
+.card h2 {
+  font-size: 1.25rem;
+}
+
+.card h2:hover {
+  color: var(--first-color);
+}
+
+.card p {
+  margin: 0;
+  font-size: 1.15rem;
+  line-height: 1.5;
 }
