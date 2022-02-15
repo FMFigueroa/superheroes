@@ -3,7 +3,7 @@
 
 /*=============== VARIABLES CSS ===============*/
 :root {
-  --header-height: 2.5rem; /*56px*/
+  --header-height: 3.5rem; /*56px*/
 
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
@@ -167,17 +167,17 @@ the website, in dark theme
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .section {
-  padding: 4rem 0 1rem;
+  padding: 4rem 0 1rem 0;
 }
 .sectionOne {
-  padding: 3rem 0 1rem;
+  padding: 3rem 0 1rem 0;
 }
 .sectionTwo {
-  padding: 2rem 0 1rem;
+  padding: 2rem 0 1rem 0;
 }
 
 .sectionThree {
-  padding: 1rem 0 1rem;
+  padding: 1rem 0 1rem 0;
 }
 
 .section__title,
@@ -235,7 +235,7 @@ the website, in dark theme
 
 .nav__logo {
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: -1px;
   display: inline-flex;
   align-items: center;
@@ -264,12 +264,12 @@ the website, in dark theme
 .btn__login {
   color: #fff;
   font-weight: var(--font-medium);
-  font-size: var(--small-font-size);
+  font-size: var(--normal-font-size);
   background-color: var(--first-color);
   box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.4);
-  padding: 0 15px;
+  padding: 0 20px;
   border-radius: 4px;
-  height: 30px;
+  height: 35px;
 }
 .btn__login:hover {
   background-color: var(--first-color-alt);
@@ -284,7 +284,7 @@ the website, in dark theme
   align-items: center;
   color: var(--title-color);
   font-weight: var(--font-medium);
-  font-size: var(--small-font-size);
+  font-size: var(--normal-font-size);
 }
 .btn__register:hover {
   text-decoration: underline;
@@ -305,15 +305,15 @@ the website, in dark theme
 .user__menu {
   min-width: 8rem;
   transform: translate3d(0px, 40px, 0px);
-  font-size: var(--small-font-size);
+  font-size: var(--normal-font-size);
   align-self: center;
   justify-self: center;
 }
 .avatar {
   display: inline-block;
   margin-bottom: 0;
-  height: 2rem;
-  width: 2rem;
+  height: 2.5rem;
+  width: 2.5rem;
   border-radius: 50%;
 }
 
@@ -430,7 +430,7 @@ the website, in dark theme
 
 .button--link {
   color: var(--first-color);
-  font-weight: var(--font-normal);
+  font-weight: var(--font-medium);
 }
 
 .button--link:hover .button__icon {
@@ -477,7 +477,6 @@ the website, in dark theme
 }
 
 .footer__input {
-  font-size: var(--small-font-size);
   width: 70%;
   padding: 0 0.5rem;
   background: none;
@@ -487,8 +486,7 @@ the website, in dark theme
 }
 
 .footer__button {
-  padding: 0.5rem 1rem;
-  font-size: var(--smaller-font-size);
+  padding: 1rem;
 }
 
 .footer__data {
@@ -505,12 +503,12 @@ the website, in dark theme
 }
 
 .footer__country-link {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: var(--first-color);
   transition: 0.3s;
 }
 .footer__contact-link {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: var(--first-color);
   transition: 0.3s;
 }
@@ -552,10 +550,11 @@ the website, in dark theme
 .scrollup {
   position: fixed;
   background-color: var(--first-color);
+  box-shadow: 0 1px 4px 2px hsla(var(--hue), 4%, 15%, 0.3);
   right: 1.5rem;
   bottom: -30%;
   display: inline-flex;
-  padding: 0.2rem 0.5rem;
+  padding: 0.15rem 0.5rem;
   border-radius: 50%;
   z-index: var(--z-tooltip);
   opacity: 0.8;
@@ -563,7 +562,7 @@ the website, in dark theme
 }
 
 .scrollup__icon {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: #fff;
 }
 
@@ -684,12 +683,12 @@ the website, in dark theme
     margin: 0;
   }
   .nav__link {
-    font-size: var(--smaller-font-size);
+    font-size: var(--normal-font-size);
   }
   /* Active link */
   .active-link {
     font-weight: var(--font-medium);
-    font-size: var(--smaller-font-size);
+    font-size: var(--normal-font-size);
   }
   .active-link::after {
     height: 1.5px;

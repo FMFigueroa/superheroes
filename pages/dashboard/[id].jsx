@@ -25,7 +25,7 @@ export default function DetailsView() {
     return (
         <Layout title="Dashboard | Team" description="this is the View">
             <div className={styles.container}>
-                <div className="container mt-3">
+                <div className="container">
                     <div className="container my-3">
                         <h1 className={styles.title}>Details View</h1>
                         <button

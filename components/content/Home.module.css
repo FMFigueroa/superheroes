@@ -21,7 +21,7 @@
 
 .title {
   padding: 1rem 0 0 0;
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   font-weight: bold;
 }
 
@@ -49,19 +49,20 @@
   justify-content: center;
   flex-wrap: wrap;
   max-width: 1200px;
+  gap: 30px;
 }
 
 .card {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 1rem;
+  /* margin: 1rem 0; */
   text-align: left;
   text-decoration: none;
   border: 1px solid #eaeaea;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
-  width: 260px;
+  width: 320px;
 }
 
 .card:hover,

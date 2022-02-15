@@ -1,10 +1,9 @@
 .container {
-  padding-top: 3rem;
+  padding-top: 1.5rem;
   width: 100%;
 }
 .title {
   color: #0070f3;
-  margin: 0;
   font-size: 2rem;
   text-align: center;
 }
@@ -76,6 +75,9 @@
   font-weight: 600;
   font-size: 0.7rem;
   color: #0070f3;
+}
+.icon__trash {
+  font-size: 0.7rem;
 }
 
 @media (max-width: 600px) {

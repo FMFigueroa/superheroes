@@ -61,34 +61,35 @@ const Home = (props) => {
             </div>
 
             {/*  Search Form */}
-            <div className=" col-md-6 offset-md-3 p-2">
-                <form
-                    className="d-flex"
-                    onSubmit={(e) => {
-                        e.preventDefault();
-                        props.submitSearch(search);
-                    }}
-                >
-                    <div className="input-group">
-                        <span className="input-group-text" id="basic-addon1">
-                            <SearchIcon style={{ width: "25px", color: "gray" }} />
-                        </span>
-                        <input
-                            className="form-control me-2"
-                            type="search"
-                            placeholder="Search"
-                            aria-label="Search"
-                            value={search}
-                            onChange={handleChange}
-                        />
-                    </div>
-                    <button className="btn btn-primary btn__color" type="submit"
+            <div className="row mx-1">
+                <div className="col-md-6 offset-md-3">
+                    <form
+                        className="d-flex"
+                        onSubmit={(e) => {
+                            e.preventDefault();
+                            props.submitSearch(search);
+                        }}
                     >
-                        Search
-                    </button>
-                </form>
+                        <div className="input-group">
+                            <span className="input-group-text" id="basic-addon1">
+                                <SearchIcon style={{ width: "25px", color: "gray" }} />
+                            </span>
+                            <input
+                                className="form-control me-2"
+                                type="search"
+                                placeholder="Search"
+                                aria-label="Search"
+                                value={search}
+                                onChange={handleChange}
+                            />
+                        </div>
+                        <button className="btn btn-primary btn__color" type="submit"
+                        >
+                            Search
+                        </button>
+                    </form>
+                </div>
             </div>
-
             {/* Logo HomePage  */}
             <div className={styles.logo__container}>
                 <Image src="/assets/img/banner.png" width={400} height={400} />

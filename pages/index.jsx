@@ -20,7 +20,7 @@ function HomePage() {
 
   return (
     <Layout
-      title="WebSite | HomePage"
+      title="Superheroes | HomePage"
       description="this is the Homepage of the website"
     >
       <Home />

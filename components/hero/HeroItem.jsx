@@ -12,7 +12,7 @@ const HeroItem = ({ hero }) => {
   }
 
   return (
-    <div className="card m-2 card__face--front" style={{ width: 270 }}>
+    <div className="card m-2 card__face--front" style={{ width: 300 }}>
       <h2 className="d-flex justify-content-center pt-2">
         {hero.name}
       </h2>
@@ -20,8 +20,8 @@ const HeroItem = ({ hero }) => {
         src={hero.image.url}
         className="card-img-top"
         alt="imagen de supeheroe"
-        width={270}
-        height={300}
+        width={300}
+        height={350}
       />
       <div className="card-body">
         <div className="conatiner">

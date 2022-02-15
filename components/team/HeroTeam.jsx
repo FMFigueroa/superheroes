@@ -36,7 +36,7 @@ const HeroTeam = ({ hero }) => {
   }
 
   return (
-    <div className="card m-2 card__face--front" style={{ width: 270 }}>
+    <div className="card m-2 card__face--front" style={{ width: 300 }}>
       <h2 className="d-flex justify-content-center card-title py-2">
         {hero.name}
       </h2>
@@ -44,8 +44,8 @@ const HeroTeam = ({ hero }) => {
         src={hero.image[0].url}
         className="card-img-top"
         alt="imagen de supeheroe"
-        width={500}
-        height={500}
+        width={300}
+        height={350}
       />
       <div className="card-body">
         <div className="conatiner">
@@ -99,7 +99,7 @@ const HeroTeam = ({ hero }) => {
               handlerDeleteHero(hero._id)
             }}
           >
-            <i className="ri-delete-bin-line"></i> Delete
+            <i className="ri-delete-bin-line" style={{ fontSize: "0.8rem" }}></i> Delete
           </button>
           <button
             type="button"

@@ -3,7 +3,7 @@ import { newHero } from "../../redux/actions/heroActions";
 import { getHeros } from "../../redux/actions/heroActions";
 import { useRouter } from "next/router";
 import { toast } from "react-toastify";
-import { ExternalLinkIcon } from "@heroicons/react/outline";
+
 
 const AddTeam = ({ hero }) => {
     const router = useRouter();
@@ -38,7 +38,7 @@ const AddTeam = ({ hero }) => {
                 } else {
                     // This cicle is for Superheroe
                     const superheroes = herosTeam.filter((hero) => hero.biography[0].alignment === "good");
-                    console.log("superhero")
+                    //console.log("superhero")
                     if (superheroes.length >= 3) {
                         toast.error("You can't add more than 3 superheroes to your team");
                     } else {
@@ -68,27 +68,4 @@ const AddTeam = ({ hero }) => {
     )
 }
 
-export default AddTeam
-
-
-
-/* const heroe = heroeDetails.filter((heroDetails) => heroDetails.biography.alignment === "good");
-                if (heroe.length === 0) {
-                    const villain = herosTeam.filter((hero) => hero.biography[0].alignment === "bad");
-                    if (villain.length >= 3) {
-                        toast.error("You can't add more than 3 Villains to your Team");
-                    } else {
-                        const heroData = { ...hero, user: user._id }
-                        dispatch(newHero(heroData));
-                        router.push(`/details/${id}`); // refresh page for look message success or error
-                    }
-                } else {
-                    const superheroes = herosTeam.filter((hero) => hero.biography[0].alignment === "good");
-                    if (superheroes >= 3) {
-                        toast.error("You can't add more than 3 superheroes to your team");
-                    } else {
-                        const heroData = { ...hero, user: user._id }
-                        dispatch(newHero(heroData));
-                        router.push(`/details/${id}`); // refresh page for look message success or error
-                    }
-                } */
+export default AddTeam;

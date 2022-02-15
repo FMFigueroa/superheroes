@@ -77,7 +77,7 @@ function Dashboard() {
             <div className={styles.container}>
                 <div className="container mt-3">
                     <div className="container my-3">
-                        <h2 className={styles.title}>Dream Team</h2>
+                        <h2 className={styles.title}>SuperTeam</h2>
                         <button
                             type="button"
                             className="btn btn-primary py-1 px-4"
@@ -90,7 +90,7 @@ function Dashboard() {
                         <div className="container my-3 py-3" style={{ boxShadow: "0px 0px 8px 3px rgba(0, 0, 0, 0.3)", borderRadius: "5px" }}>
                             <div className="card text-center"  >
                                 <div className="card-header card__face--front " style={{ backgroundColor: "var(--first-color)" }}>
-                                    <h3 className="card-title " style={{ color: "#fff" }}>Super Team </h3>
+                                    <h3 className="card-title " style={{ color: "#fff" }}>Dashboard</h3>
                                 </div>
                                 <div className="card-body card__face--front">
                                     <div className={styles.card__container}>
