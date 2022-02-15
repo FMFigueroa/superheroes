@@ -72,11 +72,12 @@ const Navbar = () => {
                         className="rounded-circle"
                     />
                 </figure>
-                <div className="btn-group ">
-                    <a type="button" className="btn dropdown-toggle user__name" data-bs-toggle="dropdown" aria-expanded="false">
-
-                        Hi, {user && user.first_name} {" "}</a>
-
+                <div className="btn-group">
+                    <Link href=''>
+                        <a type="button" className="btn dropdown-toggle user__name" data-bs-toggle="dropdown" aria-expanded="false">
+                            Hi, {user && user.first_name} {" "}
+                        </a>
+                    </Link>
                     <ul className="dropdown-menu user__menu">
                         {user && user.role === 'admin' && (
                             <>

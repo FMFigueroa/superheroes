@@ -103,7 +103,7 @@ const AllUsers = () => {
                         </Link>
 
                         <button className="btn btn-danger ms-3 btn-sm" onClick={() => deleteUserHandler(user._id)}>
-                            <i class="ri-delete-bin-line"></i>
+                            <i className="ri-delete-bin-line"></i>
                         </button>
 
                     </div>

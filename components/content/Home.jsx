@@ -6,6 +6,7 @@ import { herosDefault } from "../../db/hero";
 import HeroItem from "../../components/hero/HeroItem";
 import { submitSearch } from "../../redux/actions/heroActions";
 import { submitDetails } from "../../redux/actions/heroActions";
+import { getHeros } from "../../redux/actions/heroActions";
 import { useSelector, useDispatch, connect } from "react-redux";
 import { useRouter } from "next/router";
 import { toast } from "react-toastify";
@@ -32,9 +33,11 @@ const Home = (props) => {
 
     /* TODO: Test load wiht intial state from SSR */
     const handleViewDetails = (id) => {
-        if (dispatch && dispatch !== null && dispatch !== undefined)
+        if (dispatch && dispatch !== null && dispatch !== undefined) {
+            dispatch(getHeros());
             dispatch(submitDetails(id));
-        router.push(`/details/${id}`);
+            router.push(`/details/${id}`);
+        }
     };
 
 
@@ -42,7 +45,7 @@ const Home = (props) => {
     return (
         <div className="sectionTwo container">
             <h1 className={styles.title}>
-                Welcome to <a href="#">Superheroes</a>
+                Welcome to <a href="https://superheroapi.com/ids.html">Superheroes</a>
             </h1>
             <p className={styles.description}>
                 Get started by searching you favorite Superheroes

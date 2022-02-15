@@ -1,3 +1,4 @@
+import "remixicon/fonts/remixicon.css";
 import Image from "next/image";
 import styles from "../../styles/Details.module.css";
 import { useSelector } from "react-redux";
@@ -19,7 +20,6 @@ const HeroDetails = ({ hero }) => {
             </div>
           </div>
         ) : (
-
           <Image
             src={hero.image.url}
             alt="perfil image"
@@ -36,19 +36,19 @@ const HeroDetails = ({ hero }) => {
         <div className="card-header">
           <h4>Background</h4>
         </div>
-        {/* ------------------------------------------------------------ */}
+        {/* ----------------------- Biography --------------------------- */}
         <div className="accordion accordion-flush" id="accordionFlushExample">
           <div className="accordion-item">
-            <h2 className="accordion-header" id="flush-headingOne">
+            <h2 className="accordion-header " id="flush-headingOne">
               <button
-                className="accordion-button collapsed"
+                className="accordion-button collapsed card__face--front"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#flush-collapseOne"
                 aria-expanded="false"
                 aria-controls="flush-collapseOne"
               >
-                Biography
+                <h5>Biography</h5>
               </button>
             </h2>
             <div
@@ -58,24 +58,23 @@ const HeroDetails = ({ hero }) => {
               data-bs-parent="#accordionFlushExample"
             >
               <div className="accordion-body">
-                Placeholder content for this accordion, which is intended to
-                demonstrate the <code>.accordion-flush</code> class. This is the
-                first item's accordion body.
+                Is named {hero.biography["full-name"]} was created by{" "}
+                {hero.biography.publisher}.
               </div>
             </div>
           </div>
-          {/* ------------------------------------------------------------ */}
+          {/* ---------------------- Appearance ------------------------- */}
           <div className="accordion-item">
             <h2 className="accordion-header" id="flush-headingTwo">
               <button
-                className="accordion-button collapsed"
+                className="accordion-button collapsed card__face--front"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#flush-collapseTwo"
                 aria-expanded="false"
                 aria-controls="flush-collapseTwo"
               >
-                Appearance
+                <h5>Appearance</h5>
               </button>
             </h2>
             <div
@@ -85,25 +84,31 @@ const HeroDetails = ({ hero }) => {
               data-bs-parent="#accordionFlushExample"
             >
               <div className="accordion-body">
-                Placeholder content for this accordion, which is intended to
-                demonstrate the <code>.accordion-flush</code> class. This is the
-                second item's accordion body. Let's imagine this being filled
-                with some actual content.
+                Gender: {hero.appearance.gender}
+                <br />
+                Race: {hero.appearance.race}
+                <br />
+                Height: {hero.appearance.height[0]} /{" "}
+                {hero.appearance.height[1]}
+                <br />
+                Weight: {hero.appearance.weight[0]} /{" "}
+                {hero.appearance.weight[1]}
+                <br />
               </div>
             </div>
           </div>
-          {/* ------------------------------------------------------------ */}
+          {/* ------------------------ Work ------------------------------ */}
           <div className="accordion-item">
             <h2 className="accordion-header" id="flush-headingThree">
               <button
-                className="accordion-button collapsed"
+                className="accordion-button collapsed card__face--front"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#flush-collapseThree"
                 aria-expanded="false"
                 aria-controls="flush-collapseThree"
               >
-                Work
+                <h5>Work</h5>
               </button>
             </h2>
             <div
@@ -113,42 +118,46 @@ const HeroDetails = ({ hero }) => {
               data-bs-parent="#accordionFlushExample"
             >
               <div className="accordion-body">
-                Placeholder content for this accordion, which is intended to
-                demonstrate the <code>.accordion-flush</code> class. This is the
-                third item's accordion body. Nothing more exciting happening
-                here in terms of content, but just filling up the space to make
-                it look, at least at first glance, a bit more representative of
-                how this would look in a real-world application.
+                Occupation: {hero.work.occupation} <br />
+                Base: {hero.work.base}
               </div>
             </div>
           </div>
+          {/* ========================================================= */}
           <br></br>
         </div>
-        {/* ========================================================= */}
+        {/* ====================== PowerStats ======================= */}
         <div>
           <h4>PowerStats</h4>
         </div>
         <div className="container">
-          {/* ========================================================= */}
-          <div className="row justify-content-center">
-            <div className="col-2 d-flex justify-content-center align-items-center">
+          {/* ===================== Intelligence ====================== */}
+          <div className="row">
+            <div className="col-2 d-flex justify-content-around align-items-center px-0">
               <span className={styles.icon_graph}>
                 <Image
-                  src="https://www.superherodb.com/pictures2/portraits/10/100/791.jpg"
+                  src="https://img.icons8.com/nolan/64/artificial-intelligence.png"
                   alt="perfil image"
-                  width={30}
-                  height={30}
+                  width={32}
+                  height={32}
                 />
               </span>
             </div>
-            <div className="col-8 my-2">
-              <div className="progress">
+            <div className="col-8">
+              <div>
+                <i className={styles.title__category__powerstats}>
+                  Intelligence
+                </i>
+              </div>
+              <div className="progress" style={{ height: "14px" }}>
                 <div
                   className="progress-bar"
                   role="progressbar"
                   style={{
                     width: `${hero.powerstats.intelligence}%`,
-                    margin: "2px 0 2px 0",
+                    height: "14px",
+                    fontSize: "9px",
+                    background: "linear-gradient(45deg, blue, red)",
                   }}
                   aria-valuenow={hero.powerstats.intelligence}
                   aria-valuemin="0"
@@ -158,37 +167,37 @@ const HeroDetails = ({ hero }) => {
                 </div>
               </div>
             </div>
-            <div className="col-2 d-flex justify-content-center align-items-center">
+            <div className="col-2 d-flex justify-content-around align-items-center px-0">
               <span className={styles.icon__r}>
-                <Image
-                  src="https://www.superherodb.com/pictures2/portraits/10/100/791.jpg"
-                  alt="perfil image"
-                  width={30}
-                  height={30}
-                />
+                {hero.powerstats.intelligence} %
               </span>
             </div>
           </div>
-          {/* ========================================================= */}
-          <div className="row justify-content-center">
-            <div className="col-2 d-flex justify-content-center align-items-center">
+          {/* ===================== Strength ========================== */}
+          <div className="row">
+            <div className="col-2 d-flex justify-content-around align-items-center px-0">
               <span className={styles.icon_graph}>
                 <Image
-                  src="https://www.superherodb.com/pictures2/portraits/10/100/791.jpg"
+                  src="https://img.icons8.com/nolan/64/weightlift.png"
                   alt="perfil image"
-                  width={30}
-                  height={30}
+                  width={32}
+                  height={32}
                 />
               </span>
             </div>
-            <div className="col-8 my-2">
-              <div className="progress">
+            <div className="col-8">
+              <div>
+                <i className={styles.title__category__powerstats}>Strength</i>
+              </div>
+              <div className="progress" style={{ height: "14px" }}>
                 <div
                   className="progress-bar"
                   role="progressbar"
                   style={{
                     width: `${hero.powerstats.strength}%`,
-                    margin: "2px 0 2px 0",
+                    height: "14px",
+                    fontSize: "9px",
+                    background: "linear-gradient(45deg, blue, red)",
                   }}
                   aria-valuenow={hero.powerstats.strength}
                   aria-valuemin="0"
@@ -198,37 +207,37 @@ const HeroDetails = ({ hero }) => {
                 </div>
               </div>
             </div>
-            <div className="col-2 d-flex justify-content-center align-items-center">
+            <div className="col-2 d-flex justify-content-around align-items-center px-0">
               <span className={styles.icon__r}>
-                <Image
-                  src="https://www.superherodb.com/pictures2/portraits/10/100/791.jpg"
-                  alt="perfil image"
-                  width={30}
-                  height={30}
-                />
+                {hero.powerstats.strength} %
               </span>
             </div>
           </div>
-          {/* ========================================================= */}
-          <div className="row justify-content-center">
-            <div className="col-2 d-flex justify-content-center align-items-center">
+          {/* ====================== Speed ============================ */}
+          <div className="row">
+            <div className="col-2 d-flex justify-content-around align-items-center px-0">
               <span className={styles.icon_graph}>
                 <Image
-                  src="https://www.superherodb.com/pictures2/portraits/10/100/791.jpg"
+                  src="https://img.icons8.com/nolan/64/exercise.png"
                   alt="perfil image"
-                  width={30}
-                  height={30}
+                  width={32}
+                  height={32}
                 />
               </span>
             </div>
-            <div className="col-8 my-2">
-              <div className="progress">
+            <div className="col-8">
+              <div>
+                <i className={styles.title__category__powerstats}>Speed</i>
+              </div>
+              <div className="progress" style={{ height: "14px" }}>
                 <div
                   className="progress-bar"
                   role="progressbar"
                   style={{
                     width: `${hero.powerstats.speed}%`,
-                    margin: "2px 0 2px 0",
+                    height: "14px",
+                    fontSize: "9px",
+                    background: "linear-gradient(45deg, blue, red)",
                   }}
                   aria-valuenow="{hero.powerstats.speed}"
                   aria-valuemin="0"
@@ -238,37 +247,35 @@ const HeroDetails = ({ hero }) => {
                 </div>
               </div>
             </div>
-            <div className="col-2 d-flex justify-content-center align-items-center">
-              <span className={styles.icon__r}>
-                <Image
-                  src="https://www.superherodb.com/pictures2/portraits/10/100/791.jpg"
-                  alt="perfil image"
-                  width={30}
-                  height={30}
-                />
-              </span>
+            <div className="col-2 d-flex justify-content-around align-items-center px-0">
+              <span className={styles.icon__r}>{hero.powerstats.speed} %</span>
             </div>
           </div>
-          {/* ========================================================= */}
-          <div className="row justify-content-center">
-            <div className="col-2 d-flex justify-content-center align-items-center">
+          {/* ===================== Durability ========================== */}
+          <div className="row">
+            <div className="col-2 d-flex justify-content-around align-items-center px-0">
               <span className={styles.icon_graph}>
                 <Image
-                  src="https://www.superherodb.com/pictures2/portraits/10/100/791.jpg"
+                  src="https://img.icons8.com/nolan/64/full-battery.png"
                   alt="perfil image"
-                  width={30}
-                  height={30}
+                  width={25}
+                  height={25}
                 />
               </span>
             </div>
-            <div className="col-8 my-2">
-              <div className="progress">
+            <div className="col-8">
+              <div>
+                <i className={styles.title__category__powerstats}>Durability</i>
+              </div>
+              <div className="progress" style={{ height: "14px" }}>
                 <div
                   className="progress-bar"
                   role="progressbar"
                   style={{
                     width: `${hero.powerstats.durability}%`,
-                    margin: "2px 0 2px 0",
+                    height: "14px",
+                    fontSize: "9px",
+                    background: "linear-gradient(45deg, blue, red)",
                   }}
                   aria-valuenow={hero.powerstats.durability}
                   aria-valuemin="0"
@@ -278,37 +285,37 @@ const HeroDetails = ({ hero }) => {
                 </div>
               </div>
             </div>
-            <div className="col-2 d-flex justify-content-center align-items-center">
+            <div className="col-2 d-flex justify-content-around align-items-center px-0">
               <span className={styles.icon__r}>
-                <Image
-                  src="https://www.superherodb.com/pictures2/portraits/10/100/791.jpg"
-                  alt="perfil image"
-                  width={30}
-                  height={30}
-                />
+                {hero.powerstats.durability} %
               </span>
             </div>
           </div>
-          {/* ========================================================= */}
-          <div className="row justify-content-center">
-            <div className="col-2 d-flex justify-content-center align-items-center">
+          {/* ===================== Power ========================== */}
+          <div className="row">
+            <div className="col-2 d-flex justify-content-around align-items-center px-0">
               <span className={styles.icon_graph}>
                 <Image
-                  src="https://www.superherodb.com/pictures2/portraits/10/100/791.jpg"
+                  src="https://img.icons8.com/nolan/64/lightning-bolt.png"
                   alt="perfil image"
-                  width={30}
-                  height={30}
+                  width={32}
+                  height={32}
                 />
               </span>
             </div>
-            <div className="col-8 my-2">
-              <div className="progress">
+            <div className="col-8">
+              <div>
+                <i className={styles.title__category__powerstats}>Power</i>
+              </div>
+              <div className="progress" style={{ height: "14px" }}>
                 <div
                   className="progress-bar"
                   role="progressbar"
                   style={{
                     width: `${hero.powerstats.power}%`,
-                    margin: "2px 0 2px 0",
+                    height: "14px",
+                    fontSize: "9px",
+                    background: "linear-gradient(45deg, blue, red)",
                   }}
                   aria-valuenow={hero.powerstats.power}
                   aria-valuemin="0"
@@ -318,37 +325,35 @@ const HeroDetails = ({ hero }) => {
                 </div>
               </div>
             </div>
-            <div className="col-2 d-flex justify-content-center align-items-center">
-              <span className={styles.icon__r}>
-                <Image
-                  src="https://www.superherodb.com/pictures2/portraits/10/100/791.jpg"
-                  alt="perfil image"
-                  width={30}
-                  height={30}
-                />
-              </span>
+            <div className="col-2 d-flex justify-content-around align-items-center px-0">
+              <span className={styles.icon__r}>{hero.powerstats.power} %</span>
             </div>
           </div>
-          {/* ========================================================= */}
-          <div className="row justify-content-center">
-            <div className="col-2 d-flex justify-content-center align-items-center">
+          {/* ====================== Combat ========================= */}
+          <div className="row">
+            <div className="col-2 d-flex justify-content-around align-items-center px-0">
               <span className={styles.icon_graph}>
                 <Image
-                  src="https://www.superherodb.com/pictures2/portraits/10/100/791.jpg"
+                  src="https://img.icons8.com/nolan/64/boxing.png"
                   alt="perfil image"
-                  width={30}
-                  height={30}
+                  width={32}
+                  height={32}
                 />
               </span>
             </div>
-            <div className="col-8 my-2">
-              <div className="progress">
+            <div className="col-8">
+              <div>
+                <i className={styles.title__category__powerstats}>Combat</i>
+              </div>
+              <div className="progress" style={{ height: "14px" }}>
                 <div
                   className="progress-bar"
                   role="progressbar"
                   style={{
                     width: `${hero.powerstats.combat}%`,
-                    margin: "2px 0 2px 0",
+                    height: "14px",
+                    fontSize: "9px",
+                    background: "linear-gradient(45deg, blue, red)",
                   }}
                   aria-valuenow={hero.powerstats.combat}
                   aria-valuemin="0"
@@ -358,15 +363,8 @@ const HeroDetails = ({ hero }) => {
                 </div>
               </div>
             </div>
-            <div className="col-2 d-flex justify-content-center align-items-center">
-              <span className={styles.icon__r}>
-                <Image
-                  src="https://www.superherodb.com/pictures2/portraits/10/100/791.jpg"
-                  alt="perfil image"
-                  width={30}
-                  height={30}
-                />
-              </span>
+            <div className="col-2 d-flex justify-content-around align-items-center px-0">
+              <span className={styles.icon__r}>{hero.powerstats.combat} %</span>
             </div>
           </div>
           {/* ========================================================= */}

@@ -28,4 +28,8 @@ const initStore = () => {
     return createStore(reducer, bindMiddlware([thunkMiddleware]))
 }
 
-export const wrapper = createWrapper(initStore)
+export const wrapper = createWrapper(initStore, {
+    debug: true,
+    serializeState: (state) => JSON.stringify(state),
+    deserializeState: (state) => JSON.parse(state),
+})

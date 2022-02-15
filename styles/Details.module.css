@@ -5,11 +5,11 @@
 .title {
   color: #0070f3;
   margin: 0;
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: center;
 }
 .heroName {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #0070f3;
   font-weight: bold;
 }
@@ -32,7 +32,7 @@
   align-self: center;
   justify-self: center;
   width: 400px;
-  height: 550px;
+  height: 580px;
   border-color: #747373;
   border-style: solid;
   border-width: 1px;
@@ -42,7 +42,7 @@
 .card__powerstats {
   /* align-self: flex-start; */
   width: 400px;
-  height: 550px;
+  height: 580px;
   border-color: #747373;
   border-style: solid;
   border-width: 1px;
@@ -52,11 +52,30 @@
 .Matplot {
   display: grid;
 }
+.margin {
+  margin: 0;
+  height: 10px;
+}
+.title__category__powerstats {
+  font-size: 0.7rem;
+  color: #0070f3;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
 .icon_graph {
-  transform: translateX(20px) translateY(2px);
+  transform: translateX(10px) translateY(5px);
 }
 .icon__r {
-  transform: translateX(-20px) translateY(2px);
+  transform: translateX(-15px) translateY(13px);
+  font-weight: 600;
+  font-size: 0.7rem;
+  color: #0070f3;
+}
+.icon__r__powerstats {
+  transform: translateX(-10px) translateY(6px);
+  font-weight: 600;
+  font-size: 0.7rem;
+  color: #0070f3;
 }
 
 @media (max-width: 600px) {

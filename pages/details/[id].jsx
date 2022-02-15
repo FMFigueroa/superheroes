@@ -10,24 +10,25 @@ import React, { useState, useEffect } from "react";
 import { heroDefault } from "../../db/heroDetails";
 
 
+
 export default function DetailsView() {
     const [heroViewState, setHeroViewState] = useState(heroDefault);
-    const { hero, successDtl, messageDtl } = useSelector((state) => state.detailsHero);
+    const { hero, successDtl, messageDtl } = useSelector((state) => state.detailsHero)
     const errorDtl = useSelector((state) => state.detailsHero.error);
-    //const { success, message, error } = useSelector((state) => state.newHero);
+    const { success, message, error } = useSelector((state) => state.newHero);
     const router = useRouter();
 
-    //Results from the API for the details view
+    //Results from the API Superheroe for the details view
     useEffect(() => {
         successDtl
             ? (setHeroViewState(hero), (toast.success(messageDtl)))
             : (setHeroViewState(heroDefault), (toast.error(messageDtl)), (toast.error(errorDtl)))
     }, [successDtl, errorDtl]);
 
-    //Add Team
-    /* useEffect(() => {
+    //Results of adding a new hero to the Team (Database)
+    useEffect(() => {
         success === true ? (toast.success(message)) : (toast.error(error));
-    }, [success, message, error]); */
+    }, [success, message, error]);
 
     return (
         <Layout title="Details | Website" description="this is the View">
@@ -46,10 +47,10 @@ export default function DetailsView() {
                     <div className="row">
                         <div className="container">
                             <div className="card text-center">
-                                <div className="card-header">
+                                <div className="card-header card__face--front">
                                     {heroViewState &&
                                         heroViewState.map((hero, index) => (
-                                            <h2 className="card-title" key={index}>
+                                            <h3 className="card-title" key={index}>
                                                 {hero.biography.alignment === "good" ? (
                                                     <div>
                                                         <span className={styles.heroName}>{hero.name}</span>{" "}
@@ -61,11 +62,11 @@ export default function DetailsView() {
                                                         is a Villain
                                                     </div>
                                                 )}
-                                            </h2>
+                                            </h3>
                                         ))}
                                 </div>
 
-                                <div className="card-body">
+                                <div className="card-body card__face--front">
                                     <div className={styles.card__container}>
                                         {heroViewState &&
                                             heroViewState.map((hero, index) => (
@@ -78,11 +79,10 @@ export default function DetailsView() {
                                     {/* ======================  Card 3  ======================== */}
 
                                     <div>
-                                        <div className="container my-3 mt-5">
+                                        <div className="container my-3 mt-5 ">
                                             <h3>Create a Team</h3>
                                             <p>
-                                                With supporting text below as a natural lead-in to
-                                                additional content.
+                                                You can modify your team as many times as you want, you just have to be logged in to create it... Enjoy it..!
                                             </p>
                                         </div>
                                         {heroViewState &&
@@ -100,7 +100,7 @@ export default function DetailsView() {
                                         </button>
                                     </div>
                                 </div>
-                                <div className="card-footer text-muted">SuperHeroes</div>
+                                <div className="card-footer text-muted card__face--front ">SuperHeroes</div>
                             </div>
                         </div>
                     </div>

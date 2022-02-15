@@ -1,27 +1,51 @@
 import Image from "next/image";
 import styles from "../../styles/Details.module.css";
+import { deleteHero, getHeroeDetails } from "../../redux/actions/heroActions";
+import { useDispatch, useSelector } from "react-redux";
+import { useRouter } from "next/router";
+import { getHeros } from "../../redux/actions/heroActions";
 
 
-const HeroItem = ({ hero }) => {
+const HeroTeam = ({ hero }) => {
 
 
-  // AVG Powerstats for Superheroe
+  const dispatch = useDispatch();
+  const router = useRouter();
+
+  // Delete Superheroe from Team
+  const handlerDeleteHero = (id) => {
+    if (dispatch && dispatch !== null && dispatch !== undefined) {
+      dispatch(deleteHero(id));
+      dispatch(getHeros());
+      router.push("/dashboard"); // refresh page for look message success or error
+    }
+
+  };
+
+  // View Detail Superheroe from Team
+  const handlerDetailHero = (id) => {
+    if (dispatch && dispatch !== null && dispatch !== undefined)
+      dispatch(getHeroeDetails(id));
+    router.push(`/dashboard/${hero._id}`); // refresh page for look message success or error
+  };
+
+  // AVG Powerstats for Team
   function avgPowerstats() {
-    let sumaPowerstats = (Math.round(hero.powerstats.intelligence) + Math.round(hero.powerstats.strength) + Math.round(hero.powerstats.speed) + Math.round(hero.powerstats.durability) + Math.round(hero.powerstats.power) + Math.round(hero.powerstats.combat)) / 6;
+    let sumaPowerstats = (Math.round(hero.powerstats[0].intelligence) + Math.round(hero.powerstats[0].strength) + Math.round(hero.powerstats[0].speed) + Math.round(hero.powerstats[0].durability) + Math.round(hero.powerstats[0].power) + Math.round(hero.powerstats[0].combat)) / 6;
     return sumaPowerstats;
   }
 
   return (
     <div className="card m-2 card__face--front" style={{ width: 270 }}>
-      <h2 className="d-flex justify-content-center pt-2">
+      <h2 className="d-flex justify-content-center card-title py-2">
         {hero.name}
       </h2>
       <Image
-        src={hero.image.url}
+        src={hero.image[0].url}
         className="card-img-top"
         alt="imagen de supeheroe"
-        width={270}
-        height={300}
+        width={500}
+        height={500}
       />
       <div className="card-body">
         <div className="conatiner">
@@ -67,10 +91,29 @@ const HeroItem = ({ hero }) => {
             </div>
           </div>
         </div>
-
+        <div className="d-flex justify-content-center align-items-center gap-5">
+          <button
+            type="button"
+            className="btn btn-danger btn-sm"
+            onClick={() => {
+              handlerDeleteHero(hero._id)
+            }}
+          >
+            <i className="ri-delete-bin-line"></i> Delete
+          </button>
+          <button
+            type="button"
+            className="btn btn-primary btn-sm"
+            onClick={() => {
+              handlerDetailHero(hero._id)
+            }}
+          >
+            View &rarr;
+          </button>
+        </div>
       </div>
     </div>
   );
 };
 
-export default HeroItem;
+export default HeroTeam;

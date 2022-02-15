@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { useSelector } from 'react-redux';
 import React, { useEffect } from "react";
 import { toast } from 'react-toastify'
+import { wrapper } from "../redux/store";
+import { getHeros } from "../redux/actions/heroActions";
 
 function HomePage() {
   const { success, message } = useSelector(state => state.user) //
@@ -34,3 +36,13 @@ function HomePage() {
 }
 
 export default HomePage;
+
+export const getServerSideProps = wrapper.getServerSideProps((store) => ({ req }) => {
+
+  return {
+    props: {
+      initialReduxState: store.getState(req),
+
+    }
+  }
+})
