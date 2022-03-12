@@ -52,9 +52,6 @@ const Footer = () => {
                         <li className="footer__information">
                             <i className="ri-mail-send-line footer__contact-link"></i> felixmanuelfigueroa@gmail.com
                         </li>
-                        <li className="footer__information">
-                            <i className="ri-phone-line footer__contact-link"></i> +54 911 33851987
-                        </li>
 
                         <div className="footer__social">
                             <Link href="https://www.linkedin.com/in/felix-manuel-figueroa-3b91551b/">
