@@ -6,7 +6,6 @@ import { herosDefault } from "../../db/hero";
 import HeroItem from "../../components/hero/HeroItem";
 import { submitSearch } from "../../redux/actions/heroActions";
 import { submitDetails } from "../../redux/actions/heroActions";
-import { getHeros } from "../../redux/actions/heroActions";
 import { useSelector, useDispatch, connect } from "react-redux";
 import { useRouter } from "next/router";
 import { toast } from "react-toastify";
@@ -15,10 +14,10 @@ import { toast } from "react-toastify";
 const Home = (props) => {
     const router = useRouter();
     const dispatch = useDispatch();
+
     const [search, setSearch] = useState("");
-    const { hero, loading, success, message, error } = useSelector((state) => state.searchHero)
-    const { user } = useSelector(state => state.loadedUser)
     const [heroState, setHeroState] = useState(herosDefault);
+    const { hero, loading, success, message, error } = useSelector((state) => state.searchHero);
 
     useEffect(() => {
         success
@@ -35,14 +34,10 @@ const Home = (props) => {
     /* TODO: Test load wiht intial state from SSR */
     const handleViewDetails = (id) => {
         if (dispatch && dispatch !== null && dispatch !== undefined) {
-            const user_id = user._id;
-            dispatch(getHeros(user_id));
             dispatch(submitDetails(id));
             router.push(`/details/${id}`);
         }
     };
-
-
 
     return (
         <div className="sectionTwo container">

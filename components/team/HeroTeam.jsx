@@ -1,27 +1,35 @@
 import Image from "next/image";
 import styles from "../../styles/Details.module.css";
+import React, { useEffect } from 'react';
 import { deleteHero, getHeroeDetails } from "../../redux/actions/heroActions";
 import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/router";
 import { getHeros } from "../../redux/actions/heroActions";
+import { toast } from "react-toastify";
 
 
 const HeroTeam = ({ hero }) => {
 
   const dispatch = useDispatch();
   const router = useRouter();
+  const { user } = useSelector((state) => state.loadedUser);
+  const { success } = useSelector((state) => state.deleteHero);
 
-  const { user } = useSelector(state => state.loadedUser);
+
+  //Update the herosTeam after delete
+  useEffect(() => {
+    if (success) {
+      const user_id = user._id;
+      dispatch(getHeros(user_id));
+    }
+  }, [success]);
+
 
   // Delete Superheroe from Team
   const handlerDeleteHero = (id) => {
     if (dispatch && dispatch !== null && dispatch !== undefined) {
-      const user_id = user._id;
       dispatch(deleteHero(id));
-      dispatch(getHeros(user_id));
-      router.push("/dashboard"); // refresh page for look message success or error
     }
-
   };
 
   // View Detail Superheroe from Team

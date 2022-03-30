@@ -3,7 +3,8 @@ import Layout from "../../components/layout/Layout";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import HeroDetails from "../../components/hero/HeroDetails";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { getHeros } from "../../redux/actions/heroActions";
 import { toast } from "react-toastify";
 import AddTeam from "../../components/hero/AddTeam";
 import React, { useState, useEffect } from "react";
@@ -13,10 +14,12 @@ import { heroDefault } from "../../db/heroDetails";
 
 export default function DetailsView() {
     const [heroViewState, setHeroViewState] = useState(heroDefault);
+    const { user, isAuthenticated } = useSelector((state) => state.loadedUser);
     const { hero, successDtl, messageDtl } = useSelector((state) => state.detailsHero)
     const errorDtl = useSelector((state) => state.detailsHero.error);
     const { success, message, error } = useSelector((state) => state.newHero);
     const router = useRouter();
+    const dispatch = useDispatch();
 
     //Results from the API Superheroe for the details view
     useEffect(() => {
@@ -29,6 +32,14 @@ export default function DetailsView() {
     useEffect(() => {
         success === true ? (toast.success(message)) : (toast.error(error));
     }, [success, message, error]);
+
+    //Update the state of the herosTeam
+    useEffect(() => {
+        if (isAuthenticated) {
+            const user_id = user._id;
+            dispatch(getHeros(user_id));// update state of the Team
+        }
+    }, [isAuthenticated, user]);
 
     return (
         <Layout title="Details | Website" description="this is the View">

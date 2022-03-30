@@ -14,13 +14,14 @@ import HeroTeam from "../../components/team/HeroTeam";
 
 
 function Dashboard() {
-    const { user, isAuthenticated, message } = useSelector(state => state.loadedUser)
+    const { user, isAuthenticated, message } = useSelector((state) => state.loadedUser)
     const herosTeam = useSelector((state) => state.allHeros.herosTeam);
     const { success, error } = useSelector((state) => state.deleteHero)
     const messageDel = useSelector((state) => state.deleteHero.message)
     const router = useRouter();
     const dispatch = useDispatch()
 
+    //Update the herosTeam for add new hero
     useEffect(() => {
         if (isAuthenticated) {
             const user_id = user._id;
