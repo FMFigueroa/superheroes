@@ -31,8 +31,9 @@ const AddTeam = ({ hero }) => {
                         toast.error("You can't add more than 3 Villains to your Team");
                     } else {
                         const heroData = { ...hero, user: user._id }
+                        const user_id = user._id;
                         dispatch(newHero(heroData));
-                        dispatch(getHeros());// update state of the Team
+                        dispatch(getHeros(user_id));// update state of the Team
                         router.push(`/details/${id}`) // refresh page for look message success or error   
                     }
                 } else {
@@ -43,8 +44,9 @@ const AddTeam = ({ hero }) => {
                         toast.error("You can't add more than 3 superheroes to your team");
                     } else {
                         const heroData = { ...hero, user: user._id }
+                        const user_id = user._id;
                         dispatch(newHero(heroData));
-                        dispatch(getHeros());// update state of the Team
+                        dispatch(getHeros(user_id));// update state of the Team
                         router.push(`/details/${id}`); // refresh page for look message success or error
                     }
                 }

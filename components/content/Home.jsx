@@ -17,6 +17,7 @@ const Home = (props) => {
     const dispatch = useDispatch();
     const [search, setSearch] = useState("");
     const { hero, loading, success, message, error } = useSelector((state) => state.searchHero)
+    const { user } = useSelector(state => state.loadedUser)
     const [heroState, setHeroState] = useState(herosDefault);
 
     useEffect(() => {
@@ -34,7 +35,8 @@ const Home = (props) => {
     /* TODO: Test load wiht intial state from SSR */
     const handleViewDetails = (id) => {
         if (dispatch && dispatch !== null && dispatch !== undefined) {
-            dispatch(getHeros());
+            const user_id = user._id;
+            dispatch(getHeros(user_id));
             dispatch(submitDetails(id));
             router.push(`/details/${id}`);
         }
