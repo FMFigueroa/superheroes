@@ -7,7 +7,6 @@ import Link from 'next/link';
 import { useRouter } from "next/router";
 import PowerStats from "../../components/team/PowerStats";
 import { useDispatch, useSelector } from "react-redux";
-import { wrapper } from "../../redux/store";
 import { getHeros } from "../../redux/actions/heroActions";
 import { toast } from "react-toastify";
 import HeroTeam from "../../components/team/HeroTeam";

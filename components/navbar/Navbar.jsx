@@ -8,19 +8,18 @@ import { signOut } from 'next-auth/react';
 
 const Navbar = () => {
     const router = useRouter();
-    const dispatch = useDispatch()
-    const { loading, user, isAuthenticated } = useSelector(state => state.loadedUser)
+    const dispatch = useDispatch();
+    const { loading, user, isAuthenticated } = useSelector((state) => state.loadedUser);
 
     useEffect(() => {
         if (!user) {
-            dispatch(loadUser())
+            dispatch(loadUser());
         }
     }, [dispatch, user])
 
     /* =====================      SignOut     ===================== */
     const logoutHandler = () => {
-        signOut()
-
+        signOut();
     }
     /* ============================================================= */
 

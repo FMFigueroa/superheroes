@@ -15,11 +15,11 @@ const AddTeam = ({ hero }) => {
 
 
     // Add Superheroe to Team   
-    const handleNewHero = async (id) => {
+    const handleNewHero = (id) => {
         if (isAuthenticated) {
             const hero_Id = herosTeam.filter((heroId) => heroId.id == id);//filter the hero with the id in the team
             if (hero_Id.length === 0) {
-                console.log(hero_Id.length)
+                //console.log(hero_Id.length)
                 // This const is for select if the hero view details is good or bad.
                 const heroe = heroeDetails.filter((heroDetails) => heroDetails.biography.alignment === "good");
                 if (heroe.length === 0) {

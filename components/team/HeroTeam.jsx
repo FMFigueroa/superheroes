@@ -5,7 +5,6 @@ import { deleteHero, getHeroeDetails } from "../../redux/actions/heroActions";
 import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/router";
 import { getHeros } from "../../redux/actions/heroActions";
-import { toast } from "react-toastify";
 
 
 const HeroTeam = ({ hero }) => {

@@ -105,9 +105,7 @@ export const submitDetails = (id) => async (dispatch) => {
 export const getHeros = (user_id) => async (dispatch) => {
 
     try {
-        dispatch({ type: ALL_HEROS_REQUEST })
-        console.log(`hola: ${user_id}`);
-
+        dispatch({ type: ALL_HEROS_REQUEST });
         const { data } = await axios.get('/api/heroes', { headers: { 'id': user_id } });
         dispatch({
             type: ALL_HEROS_SUCCESS,
