@@ -14,7 +14,7 @@ import HeroTeam from "../../components/team/HeroTeam";
 
 
 function Dashboard() {
-    const { isAuthenticated, message } = useSelector(state => state.loadedUser)
+    const { user, isAuthenticated, message } = useSelector(state => state.loadedUser)
     const herosTeam = useSelector((state) => state.allHeros.herosTeam);
     const { success, error } = useSelector((state) => state.deleteHero)
     const messageDel = useSelector((state) => state.deleteHero.message)
@@ -23,9 +23,8 @@ function Dashboard() {
 
     useEffect(() => {
         if (isAuthenticated) {
-            //const user_id = user._id;
-            //console.log(user_id)
-            dispatch(getHeros()); // get all heros, need to associate them with the user. 
+            const user_id = user._id;
+            dispatch(getHeros(user_id)); // get all heros, need to associate them with the user. 
         }
     }, [isAuthenticated]);
 

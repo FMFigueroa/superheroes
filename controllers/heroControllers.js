@@ -2,6 +2,7 @@ import Heroe from '../models/heroe';
 import User from '../models/user'
 import ErrorHandler from '../utils/errorHandler';
 import catchAsyncErrors from "../middlewares/catchAsyncErrors";
+import { _id } from '@next-auth/mongodb-adapter';
 
 
 // Get search heroes... => /api/search/
@@ -53,20 +54,22 @@ const deatilsHeroe = catchAsyncErrors(async (req, res, next) => {
 // Get all heroes... => /api/heroes/
 const allHeroes = catchAsyncErrors(async (req, res, next) => {
 
+    const id = req.headers["id"];
+
     const herosCount = await Heroe.countDocuments();
-    const herosTeam = await Heroe.find();
+    const herosTeam = await Heroe.find({ user: id });
 
     if (!herosTeam) {
-        return next(new ErrorHandler('Heroe wasnt found', 404))
+        return next(new ErrorHandler('Heroe wasnt found', 404));
     }
 
     res.status(200).json({
         success: true,
         herosCount,
         herosTeam: herosTeam
-    })
+    });
 
-})
+});
 
 // Post a new heroe... => /api/heroes
 const newHeroe = catchAsyncErrors(async (req, res, next) => {
