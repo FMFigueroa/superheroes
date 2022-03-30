@@ -8,15 +8,17 @@ import { getHeros } from "../../redux/actions/heroActions";
 
 const HeroTeam = ({ hero }) => {
 
-
   const dispatch = useDispatch();
   const router = useRouter();
+
+  const { user } = useSelector(state => state.loadedUser);
 
   // Delete Superheroe from Team
   const handlerDeleteHero = (id) => {
     if (dispatch && dispatch !== null && dispatch !== undefined) {
+      const user_id = user._id;
       dispatch(deleteHero(id));
-      dispatch(getHeros());
+      dispatch(getHeros(user_id));
       router.push("/dashboard"); // refresh page for look message success or error
     }
 
