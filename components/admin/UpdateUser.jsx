@@ -137,7 +137,7 @@ const UpdateUser = () => {
 
                                 >
 
-                                    <option value="actived">actived</option>
+                                    <option value="activated">activated</option>
                                     <option value="deactivated">deactivated</option>
                                 </select>
                             </div>
