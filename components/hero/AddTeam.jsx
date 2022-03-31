@@ -16,7 +16,7 @@ const AddTeam = ({ hero }) => {
 
     // Add Superheroe to Team   
     const handleNewHero = (id) => {
-        if (isAuthenticated) {
+        breakme: if (isAuthenticated) {
             const hero_Id = herosTeam.filter((heroId) => heroId.id == id);//filter the hero with the id in the team
             if (hero_Id.length === 0) {
                 //console.log(hero_Id.length)
@@ -34,7 +34,8 @@ const AddTeam = ({ hero }) => {
                         const user_id = user._id;
                         dispatch(newHero(heroData));
                         dispatch(getHeros(user_id));// update state of the Team
-                        router.push(`/details/${id}`) // refresh page for look message success or error   
+                        router.push(`/details/${id}`); // refresh page for look message success or error  
+                        break breakme;
                     }
                 } else {
                     // This cicle is for Superheroe
@@ -48,6 +49,7 @@ const AddTeam = ({ hero }) => {
                         dispatch(newHero(heroData));
                         dispatch(getHeros(user_id));// update state of the Team
                         router.push(`/details/${id}`); // refresh page for look message success or error
+                        break breakme;
                     }
                 }
             } else {
